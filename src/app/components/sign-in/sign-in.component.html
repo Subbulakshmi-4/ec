@@ -1,1 +1,19 @@
-<p>sign-in works!</p>
+<h2 style="text-align: center;">SIGN IN</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+
+    </div>
+    <div class="col-lg-4">
+      <form [formGroup]="register">
+        <input type="email" class="form-control" placeholder="email" #userName required>
+        <!-- <span style="color: red;">Enter valid username</span> -->
+        <br>
+        <input type="password" class="form-control" placeholder="password" #userPassword required>
+        <!-- <span style="color: red;">Enter valid password</span> -->
+        <br>
+        <button type="button" (click)="authService.SignIn(userName.value, userPassword.value)">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

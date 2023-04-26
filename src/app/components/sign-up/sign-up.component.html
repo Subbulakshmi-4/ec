@@ -1,1 +1,16 @@
-<p>sign-up works!</p>
+<h2 style="text-align: center;">SIGN UP</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+    </div>
+    <div class="col-lg-4">
+      <form [formGroup]="register">
+        <input type="email" class="form-control" placeholder="email" #userEmail required>
+        <br>
+        <input type="password" class="form-control" placeholder="password" #userPwd required>
+        <br>
+        <button type="button" (click)="authService.SignUp(userEmail.value, userPwd.value)">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
